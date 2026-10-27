@@ -5,7 +5,7 @@ import { useUserStore } from '@/stores/userStore'
 import router from '@/router'
 
 const httpInstance = axios.create({
-    baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net',
+    baseURL: import.meta.env.VITE_APP_BASE_API, // 基础路径，使用环境变量中的VITE_APP_BASE_API值
     timeout: 5000
 })
 
